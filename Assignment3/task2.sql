@@ -1,3 +1,6 @@
+/*
+task-1  query -1
+*/
 SELECT p.product_id, p.name , COUNT(pc.category_id)
 FROM product_category pc
 INNER JOIN product p 
@@ -5,6 +8,10 @@ ON p.product_id = pc.product_id
 GROUP BY p.product_id , p.name
 HAVING COUNT(pc.category_id)>1
 ORDER BY p.product_id;
+
+/*
+task-2  query -2
+*/
 
 SELECT 
 CASE  
@@ -15,6 +22,10 @@ CASE
  Count(*) as count
  FROM product
  GROUP BY price_range;
+ 
+/*
+task 2 , query - 3
+*/
  
 SELECT c.category_id,name ,count(pc.product_id) as count
 FROM product_category pc
